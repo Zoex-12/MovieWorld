@@ -1,1 +1,32 @@
 @import "tailwindcss";
+
+* {
+  box-sizing: border-box;
+}
+*:before,
+*:after {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+.link:after {
+  position: absolute;
+  content: "";
+  height: 1px;
+  background: red;
+  width: 0%;
+  left: 0;
+  bottom: -4px;
+  transition: width 0.3s ease;
+}
+.link:hover:after {
+  width: 100%;
+}
+body {
+  background: #0a0a0a;
+  color: white;
+}
+.container {
+  width: 90%;
+  margin: auto;
+}
